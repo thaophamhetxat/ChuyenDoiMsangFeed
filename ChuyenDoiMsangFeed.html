@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi đơn vị đo:</h3>
+<p>
+    <label>Feet</label>
+    <input type="number" id="feetomet" onchange="mtof(this.value)" oninput="mtof(this.value)">;
+</p>
+<p>To meet:  <span id="feet_to"></span></p>
+<p>
+    <label>Meet</label>
+    <input type="number" id="metofeet" onchange="mtof2(this.value)" oninput="mtof2(this.value)">;
+</p>
+<p>To feet:  <span id="met_to"></span></p>
+<script>
+    function mtof(feet) {
+        feet = parseFloat(feet);
+        document.getElementById('feet_to').innerHTML = feet * 0.305;
+    }
+    function mtof2(meet) {
+        meet = parseFloat(meet);
+        document.getElementById('met_to').innerHTML = meet * 3.279;
+    }
+</script>
+</body>
+</html>
